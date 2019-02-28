@@ -99,35 +99,6 @@ public:
             StopWatch::ElapsedTime(); std::cout << std::endl;
             lmp::Clear(paraswing);
         }
-        std::cout << "ParaSchoen: ";
-        {
-            lmp::Init(paraschoen); StopWatch::Start();
-            Schoenhage::ParallelFactorial(paraschoen, n);
-            StopWatch::ElapsedTime(); std::cout << std::endl;
-            lmp::Clear(paraschoen);
-        }
-        std::cout << "PrimeSwing: ";
-        {
-            lmp::Init(swing); StopWatch::Start();
-            PrimeSwing::Factorial(swing, n);
-            StopWatch::ElapsedTime(); std::cout << std::endl;
-            lmp::Clear(swing);
-        }
-        std::cout << "Schoenhage: ";
-        {
-            lmp::Init(schoen); StopWatch::Start();
-            Schoenhage::Factorial(schoen, n);
-            StopWatch::ElapsedTime(); std::cout << std::endl;
-            lmp::Clear(schoen);
-        }
-        // Calculate factorial using the mp-library
-        std::cout << "MP-library: ";
-        {
-            lmp::Init(fact); StopWatch::Start();
-            lmp::FacUi(fact, n);
-            StopWatch::ElapsedTime(); std::cout << std::endl;
-            lmp::Clear(fact);
-        }
     }
 
     static void DoubleFactorialSanityCheck(ulong limit)
