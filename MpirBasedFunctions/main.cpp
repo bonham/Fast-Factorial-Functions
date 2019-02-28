@@ -16,22 +16,9 @@
 //  "attention to the required space is pointless."                << std::endl;
 //  std::cin.get(); }
 
-static void FactTest()
-{
-    Test::FactorialSanityCheck(1000);
-
-    ulong n = 387420489;
-    Test::FactorialBenchmark(n);
-
-}
-
 int main()
 {
-   char yes; 
+   Test::FactorialBenchmark();
 
-   std::cout << std::endl << "Factorial Test? (y/n)" << std::endl;
-   std::cin >> yes; if(yes == 'y' || yes == 'Y') FactTest();
-
-    std::cout << std::endl << "Done." << std::endl;  std::cin.get();
     return 0;
 }
